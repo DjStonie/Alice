@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:include="layout :: site-head">
+    <title>URL - analyser</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+</head>
+
+<body>
+
+
+    <!-- Content Wrapper. Contains page content -->
+
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box box-primary">
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Letter</th>
+                                    <th>Occurrences</th>
+                                    <th>Procent</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="letter : ${letter}">
+                                    <td th:text="${letter.Char}">Bogstav</td>
+                                    <td th:text="${letter.Occurrences}">antal</td>
+                                    <td th:text="${letter.Procent}">procent</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>Letter</th>
+                                    <th>Occurrences</th>
+                                    <th>Procent</th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    <!-- /.content-wrapper -->
+    <!-- page script -->
+    <script>
+        $(function () {
+            $('#example1').DataTable({
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : false,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false
+            })
+        })
+    </script>
+
+</body>
+</html>

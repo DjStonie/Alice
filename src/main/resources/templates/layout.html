@@ -1,0 +1,31 @@
+<!-- This is the standard html file that all other html files will copy. // Patrick -->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+
+<head th:fragment="site-head">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css" th:href="@{/fonts/font-awesome.min.css}"/>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="/fonts/ionicons.min.css" th:href="@{/fonts/ionicons.min.css}"/>
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/css/AdminLTE.min.css" th:href="@{/css/AdminLTE.min.css}"/>
+    <!-- DataTables -->
+    <link rel="stylesheet" href="/css/dataTables.bootstrap.min.css" th:href="@{/css/dataTables.bootstrap.min.css}"/>
+    <!-- iCheck -->
+    <link rel="stylesheet" href="/css/blue.css" th:href="@{/css/blue.css}"/>
+    <!-- AdminLTE Skins.-->
+    <link rel="stylesheet" href="/css/skin-blue.min.css" th:href="@{/css/skin-blue.min.css}"/>
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
+    <meta th:include="this :: head" th:remove="tag"/>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:include="layout :: site-head">
+    <title>URL Text Analyser</title>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+    <div class="login-logo">
+        <b>URL</b>Analyser
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+        <p class="login-box-msg">Indtast URL</p>
+
+        <form th:action="@{/analysis}" method="post" role="form">
+            <div class="form-group has-feedback">
+                <input type="text" class="form-control" name="url"></input>
+            </div>
+            <!-- /.col -->
+            <div class="row">
+                <div class="col-xs-8">
+                </div>
+                <div class="col-xs-6">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Analyser link</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- REQUIRED JS SCRIPTS -->
+<!-- Bootstrap 3.3.7 -->
+<script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
